@@ -1,0 +1,342 @@
+/***
+====================================================================
+	Production custom styles (видео-блоки, правки под одностраничник)
+====================================================================
+***/
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Топбар: надпись у правого края --- */
+.site-topbar {
+    position: relative;
+    z-index: 5;
+    padding: 32px 0 0;
+}
+
+.site-topbar .container {
+    max-width: 1400px;
+}
+
+.site-topbar__note {
+    margin: 0;
+    text-align: right;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 767px) {
+    .site-topbar {
+        padding-top: 24px;
+    }
+
+    .site-topbar__note {
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 1.6px;
+    }
+}
+
+/* --- Мультиэкранные видео: друг под другом, во всю ширину --- */
+.showreel-box--stacked {
+    max-width: 1400px;
+    width: 100%;
+    background: none;
+    padding: 0;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.showreel-box--stacked .video-embed {
+    border-radius: 18px;
+}
+
+.showreel-box--stacked .video-embed__label {
+    font-size: 17px;
+}
+
+@media (max-width: 767px) {
+    .showreel-box--stacked {
+        margin-top: 32px;
+        gap: 20px;
+    }
+}
+
+/* --- Обёртка видео 16:9 --- */
+.video-embed {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #12071f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Плейсхолдер до клика (click-to-load) --- */
+.video-embed__poster {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    cursor: pointer;
+    background:
+        radial-gradient(120% 120% at 20% 0%, rgba(124, 83, 255, 0.35) 0%, rgba(18, 7, 31, 0) 55%),
+        radial-gradient(120% 120% at 90% 100%, rgba(248, 56, 217, 0.28) 0%, rgba(18, 7, 31, 0) 55%),
+        #150a24;
+    transition: all 0.4s ease;
+}
+
+.video-embed__poster:hover {
+    background:
+        radial-gradient(120% 120% at 20% 0%, rgba(124, 83, 255, 0.5) 0%, rgba(18, 7, 31, 0) 60%),
+        radial-gradient(120% 120% at 90% 100%, rgba(248, 56, 217, 0.4) 0%, rgba(18, 7, 31, 0) 60%),
+        #170b28;
+}
+
+.video-embed__play {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7c53ff 0%, #f838d9 100%);
+    color: #fff;
+    font-size: 22px;
+    transition: transform 0.35s ease;
+}
+
+.video-embed__poster:hover .video-embed__play {
+    transform: scale(1.12);
+}
+
+.video-embed__play i {
+    margin-left: 4px;
+}
+
+.video-embed__label {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Большой шоурил в hero */
+.showreel-box {
+    position: relative;
+    max-width: 1000px;
+    margin: 60px auto 0;
+    padding: 10px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(124, 83, 255, 0.55), rgba(248, 56, 217, 0.55));
+}
+
+/* Слот «в производстве»: без плеера и клика */
+.video-embed--soon .video-embed__poster {
+    cursor: default;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+.video-embed--soon .video-embed__label span {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.showreel-box .video-embed {
+    border-radius: 16px;
+}
+
+.showreel-box .video-embed__play {
+    width: 96px;
+    height: 96px;
+    font-size: 30px;
+}
+
+/* --- Сетка работ --- */
+.works-one {
+    position: relative;
+    display: block;
+    padding: 120px 0 90px;
+}
+
+.works-one__single {
+    margin-bottom: 30px;
+}
+
+.works-one__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 16px;
+}
+
+.works-one__cat {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 4px;
+}
+
+/* --- Контакты --- */
+.contacts-one {
+    position: relative;
+    display: block;
+    padding: 0 0 120px;
+}
+
+.contacts-one__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 60px;
+    margin: 40px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contacts-one__list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contacts-one__list li i {
+    font-size: 22px;
+    background: linear-gradient(135deg, #7c53ff 0%, #f838d9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contacts-one__list li a {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.contacts-one__list li a:hover {
+    color: #c9a8ff;
+}
+
+.contacts-one__social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.contacts-one__social a {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.contacts-one__social a:hover {
+    background: linear-gradient(135deg, #7c53ff 0%, #f838d9 100%);
+    border-color: transparent;
+}
+
+/* Иконки услуг через FontAwesome вместо картинок */
+.solutions-one__icon i {
+    font-size: 42px;
+    line-height: 1;
+    background: linear-gradient(135deg, #7c53ff 0%, #f838d9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Упрощённый hero */
+.feature-one--production {
+    padding: 60px 0 120px;
+}
+
+.feature-one--production > .container {
+    max-width: 1440px;
+}
+
+.feature-one--production .feature-one__text {
+    max-width: 640px;
+    margin: 24px auto 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 767px) {
+    .showreel-box {
+        margin-top: 40px;
+        padding: 6px;
+    }
+
+    .video-embed__play {
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
+    }
+
+    .showreel-box .video-embed__play {
+        width: 68px;
+        height: 68px;
+        font-size: 22px;
+    }
+
+    .contacts-one__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+}

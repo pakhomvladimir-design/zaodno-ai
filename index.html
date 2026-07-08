@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Заодно — AI CG видеопродакшн. Кейсы</title>
-	<meta name="description" content="AI-кейсы студии «Заодно»: генеративное видео, CG, нейросетевой продакшн.">
+	<title>AI CG видеопродакшн — кейсы</title>
+	<meta name="description" content="Кейсы AI CG видеопродакшна: генеративное видео, мультиэкранная проекция, нейросетевой пайплайн.">
 
 	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
 
 	<!-- Stylesheets -->
 	<link href="styles.css" rel="stylesheet">
+	<link href="custom.css" rel="stylesheet">
 </head>
 
 <body class="body-bg-color">
@@ -29,49 +30,9 @@
 		<div class="cursor-follower"></div>
 
 		<!-- ===================== ХЕДЕР ===================== -->
-		<header class="main-header main-header-one">
-			<div class="header-lower">
-				<div class="main-menu__wrapper">
-					<div class="inner-container d-flex align-items-center justify-content-between">
-
-						<div class="main-header-one__logo-box">
-							<a href="#top" class="site-logo-text">За<span>одно</span></a>
-						</div>
-
-						<div class="nav-outer">
-							<nav class="main-menu show navbar-expand-md">
-								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-									<ul class="navigation clearfix">
-										<li class="current"><a href="#showreel">Шоурил</a></li>
-										<li><a href="#works">Кейсы</a></li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-
-						<div class="outer-box d-flex align-items-center">
-							<span class="site-logo-tagline">AI CG видеопродакшн</span>
-
-							<!-- Mobile Navigation Toggler -->
-							<div class="mobile-nav-toggler">
-								<span class="icon-menu"></span>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-
-			<!-- Mobile Menu -->
-			<div class="mobile-menu">
-				<div class="menu-backdrop"></div>
-				<div class="close-btn"><span class="icon far fa-times fa-fw"></span></div>
-				<nav class="menu-box">
-					<div class="nav-logo"><a href="#top" class="site-logo-text">За<span>одно</span></a></div>
-					<div class="menu-outer">
-						<!-- Меню подставится автоматически из хедера через JS -->
-					</div>
-				</nav>
+		<header class="site-topbar">
+			<div class="container">
+				<p class="site-topbar__note">ПОДГОТОВЛЕНО ДЛЯ ФОРУМА «РОССИЯ&nbsp;— МОИ ГОРИЗОНТЫ»</p>
 			</div>
 		</header>
 
@@ -79,33 +40,30 @@
 		<section class="feature-one feature-one--production" id="showreel">
 			<div class="container">
 				<div class="feature-one__inner">
-					<h2 class="feature-one__title">AI-кейсы студии <br>
-						<span>«Заодно»</span></h2>
-					<p class="feature-one__text">Генеративное видео и CG: подборка работ, сделанных
-						с использованием нейросетевого пайплайна.</p>
+					<div class="section-title text-center">
+						<div class="section-title__tagline-box">
+							<span class="section-title__tagline">Мультиэкранная проекция</span>
+						</div>
+						<h2 class="section-title__title">Мультиэкранные AI-видео</h2>
+					</div>
+					<p class="feature-one__text">Контент разбит на девять экранов и сведён
+						в единое широкоформатное полотно.</p>
 
-					<!-- Два заглавных видео (контент на 9 экранов, широкоформат) — в производстве.
-					     Когда будут готовы: впишите data-oid/data-vid, уберите класс video-embed--soon -->
-					<div class="showreel-box showreel-box--dual wow fadeInUp" data-wow-delay="200ms">
-						<div class="row g-3">
-							<div class="col-md-6">
-								<div class="video-embed video-embed--soon" data-oid="" data-vid="">
-									<div class="video-embed__poster">
-										<div class="video-embed__label">Заглавное видео 1<br><span>9 экранов · в производстве</span></div>
-									</div>
-								</div>
+					<div class="showreel-box showreel-box--stacked wow fadeInUp" data-wow-delay="200ms">
+						<div class="video-embed" data-oid="-240127147" data-vid="456239023">
+							<div class="video-embed__poster">
+								<div class="video-embed__play"><i class="fas fa-play"></i></div>
+								<div class="video-embed__label">Мультиэкранное AI-видео 1</div>
 							</div>
-							<div class="col-md-6">
-								<div class="video-embed video-embed--soon" data-oid="" data-vid="">
-									<div class="video-embed__poster">
-										<div class="video-embed__label">Заглавное видео 2<br><span>9 экранов · в производстве</span></div>
-									</div>
-								</div>
+						</div>
+						<div class="video-embed" data-oid="-240127147" data-vid="456239024">
+							<div class="video-embed__poster">
+								<div class="video-embed__play"><i class="fas fa-play"></i></div>
+								<div class="video-embed__label">Мультиэкранное AI-видео 2</div>
 							</div>
 						</div>
 					</div>
-
-					</div>
+				</div>
 			</div>
 		</section>
 
@@ -177,9 +135,10 @@
 					</div>
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
 						<div class="works-one__single">
-							<div class="video-embed video-embed--soon" data-oid="" data-vid="">
+							<div class="video-embed" data-oid="-240127147" data-vid="456239022">
 								<div class="video-embed__poster">
-									<div class="video-embed__label">AI мультипликация<br><span>скоро</span></div>
+									<div class="video-embed__play"><i class="fas fa-play"></i></div>
+									<div class="video-embed__label">AI мультипликация</div>
 								</div>
 							</div>
 							<h4 class="works-one__title">AI мультипликация</h4>
@@ -194,7 +153,7 @@
 			<div class="main-footer__bottom">
 				<div class="container">
 					<div class="main-footer__bottom-inner">
-						<p class="main-footer__bottom-text">© 2026 Студия «Заодно» · AI CG видеопродакшн</p>
+						<p class="main-footer__bottom-text">AI CG видеопродакшн · 2026</p>
 					</div>
 				</div>
 			</div>
