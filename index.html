@@ -9,13 +9,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<link id="theme-color-file" href="css/color-themes/default-color.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Stylesheets -->
-	<link href="styles.css" rel="stylesheet">
-	<link href="custom.css" rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/module-css/production.css" rel="stylesheet">
 </head>
 
 <body class="body-bg-color">
@@ -32,7 +35,10 @@
 		<!-- ===================== ХЕДЕР ===================== -->
 		<header class="site-topbar">
 			<div class="container">
-				<p class="site-topbar__note">ПОДГОТОВЛЕНО ДЛЯ ФОРУМА «РОССИЯ&nbsp;— МОИ ГОРИЗОНТЫ»</p>
+				<div class="site-topbar__row">
+					<p class="site-topbar__brand">AI СТУДИЯ «ЮЖНЫЙ ПРОМПТ»</p>
+					<p class="site-topbar__note">ПОДГОТОВЛЕНО ДЛЯ ФОРУМА «РОССИЯ&nbsp;— МОИ ГОРИЗОНТЫ»</p>
+				</div>
 			</div>
 		</header>
 
@@ -50,18 +56,12 @@
 						в единое широкоформатное полотно.</p>
 
 					<div class="showreel-box showreel-box--stacked wow fadeInUp" data-wow-delay="200ms">
-						<div class="video-embed" data-oid="-240127147" data-vid="456239023">
-							<div class="video-embed__poster">
-								<div class="video-embed__play"><i class="fas fa-play"></i></div>
-								<div class="video-embed__label">Мультиэкранное AI-видео 1</div>
-							</div>
-						</div>
-						<div class="video-embed" data-oid="-240127147" data-vid="456239024">
-							<div class="video-embed__poster">
-								<div class="video-embed__play"><i class="fas fa-play"></i></div>
-								<div class="video-embed__label">Мультиэкранное AI-видео 2</div>
-							</div>
-						</div>
+						<video class="hero-video" autoplay loop muted playsinline preload="auto">
+							<source src="hero-1.mp4" type="video/mp4">
+						</video>
+						<video class="hero-video" autoplay loop muted playsinline preload="auto">
+							<source src="hero-2.mp4" type="video/mp4">
+						</video>
 					</div>
 				</div>
 			</div>
@@ -80,7 +80,10 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
 						<div class="works-one__single">
-							<div class="video-embed" data-oid="-240127147" data-vid="456239020">
+							<div class="video-embed">
+								<video class="case-video" controls preload="none" playsinline poster="poster-case1-artikfest.jpg">
+									<source src="case1-artikfest.mp4" type="video/mp4">
+								</video>
 								<div class="video-embed__poster">
 									<div class="video-embed__play"><i class="fas fa-play"></i></div>
 									<div class="video-embed__label">AI промо в реалистичном стиле</div>
@@ -91,29 +94,24 @@
 					</div>
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
 						<div class="works-one__single">
-							<div class="video-embed" data-oid="-240127147" data-vid="456239017">
+							<div class="video-embed">
+								<video class="case-video" controls preload="none" playsinline poster="poster-case2-bitva.jpg">
+									<source src="case2-bitva.mp4" type="video/mp4">
+								</video>
 								<div class="video-embed__poster">
 									<div class="video-embed__play"><i class="fas fa-play"></i></div>
-									<div class="video-embed__label">Пиксельная AI мультипликация</div>
+									<div class="video-embed__label">AI мультипликация</div>
 								</div>
 							</div>
-							<h4 class="works-one__title">Пиксельная AI мультипликация</h4>
+							<h4 class="works-one__title">AI мультипликация</h4>
 						</div>
 					</div>
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
 						<div class="works-one__single">
-							<div class="video-embed" data-oid="-240127147" data-vid="456239021">
-								<div class="video-embed__poster">
-									<div class="video-embed__play"><i class="fas fa-play"></i></div>
-									<div class="video-embed__label">AI абстракция: открытие делового форума</div>
-								</div>
-							</div>
-							<h4 class="works-one__title">AI абстракция: открытие делового форума</h4>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-						<div class="works-one__single">
-							<div class="video-embed" data-oid="-240127147" data-vid="456239019">
+							<div class="video-embed">
+								<video class="case-video" controls preload="none" playsinline poster="poster-case3-arctic-wave.jpg">
+									<source src="case3-arctic-wave.mp4" type="video/mp4">
+								</video>
 								<div class="video-embed__poster">
 									<div class="video-embed__play"><i class="fas fa-play"></i></div>
 									<div class="video-embed__label">Сюжетная AI анимация в голографическом стиле</div>
@@ -122,9 +120,26 @@
 							<h4 class="works-one__title">Сюжетная AI анимация в голографическом стиле</h4>
 						</div>
 					</div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+						<div class="works-one__single">
+							<div class="video-embed">
+								<video class="case-video" controls preload="none" playsinline poster="poster-case4-naoborot.jpg">
+									<source src="case4-naoborot.mp4" type="video/mp4">
+								</video>
+								<div class="video-embed__poster">
+									<div class="video-embed__play"><i class="fas fa-play"></i></div>
+									<div class="video-embed__label">AI мультипликация</div>
+								</div>
+							</div>
+							<h4 class="works-one__title">AI мультипликация</h4>
+						</div>
+					</div>
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
 						<div class="works-one__single">
-							<div class="video-embed" data-oid="-240127147" data-vid="456239018">
+							<div class="video-embed">
+								<video class="case-video" controls preload="none" playsinline poster="poster-case5-mify.jpg">
+									<source src="case5-mify.mp4" type="video/mp4">
+								</video>
 								<div class="video-embed__poster">
 									<div class="video-embed__play"><i class="fas fa-play"></i></div>
 									<div class="video-embed__label">AI мультипликация</div>
@@ -135,13 +150,16 @@
 					</div>
 					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
 						<div class="works-one__single">
-							<div class="video-embed" data-oid="-240127147" data-vid="456239022">
+							<div class="video-embed">
+								<video class="case-video" controls preload="none" playsinline poster="poster-case6-inhub.jpg">
+									<source src="case6-inhub.mp4" type="video/mp4">
+								</video>
 								<div class="video-embed__poster">
 									<div class="video-embed__play"><i class="fas fa-play"></i></div>
-									<div class="video-embed__label">AI мультипликация</div>
+									<div class="video-embed__label">AI абстракция: открытие делового форума</div>
 								</div>
 							</div>
-							<h4 class="works-one__title">AI мультипликация</h4>
+							<h4 class="works-one__title">AI абстракция: открытие делового форума</h4>
 						</div>
 					</div>
 </div>
@@ -165,44 +183,36 @@
 	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fas fa-arrow-up fa-fw"></span></div>
 
 	<!-- Scripts -->
+	<script src="js/jquery.js"></script>
+	<script src="js/01-bootstrap.min.js"></script>
+	<script src="js/02-bootstrap-select.min.js"></script>
+	<script src="js/04-owl.js"></script>
+	<script src="js/05-jarallax.min.js"></script>
+	<script src="js/06-isotope.js"></script>
+	<script src="js/07-wow.js"></script>
+	<script src="js/08-validate.js"></script>
+	<script src="js/09-appear.js"></script>
+	<script src="js/10-swiper.min.js"></script>
+	<script src="js/11-jquery.easing.min.js"></script>
+	<script src="js/12-gsap.min.js"></script>
+	<script src="js/13-odometer.js"></script>
+	<script src="js/14-tilt.jquery.min.js"></script>
+	<script src="js/15-magnific-popup.min.js"></script>
+	<script src="js/16-jquery-ui.js"></script>
+	<script src="js/17-marquee.min.js"></script>
+	<script src="js/18-jquery.circleType.js"></script>
+	<script src="js/19-jquery.lettering.min.js"></script>
+	<script src="js/script.js"></script>
 
-	<script src="bundle.js"></script>
-
-	<!-- ===================== КАК ЗАМЕНИТЬ ВИДЕО =====================
-	Каждый блок видео выглядит так:
-		<div class="video-embed" data-oid="-XXXXXXXX" data-vid="XXXXXXXXX">
-
-	Возьмите адрес ролика в VK Видео, например:
-		vk.com/video-123456789_456239017
-	Часть до подчёркивания (с минусом) — в data-oid: -123456789
-	Часть после подчёркивания — в data-vid: 456239017
-
-	Либо «Поделиться» → «Экспортировать»: в коде embed будет
-		https://vk.com/video_ext.php?oid=-123456789&id=456239017
-	oid → data-oid, id → data-vid.
-
-	Плеер подгружается по клику на превью — страница остаётся быстрой
-	при любом количестве роликов.
-	================================================================ -->
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
-			document.querySelectorAll('.video-embed:not(.video-embed--soon)').forEach(function (box) {
+			document.querySelectorAll('.video-embed').forEach(function (box) {
 				var poster = box.querySelector('.video-embed__poster');
-				if (!poster) return;
+				var video = box.querySelector('.case-video');
+				if (!poster || !video) return;
 				poster.addEventListener('click', function () {
-					var oid = box.getAttribute('data-oid');
-					var vid = box.getAttribute('data-vid');
-					if (!oid || !vid || oid.indexOf('X') !== -1) {
-						poster.querySelector('.video-embed__label').textContent =
-							'Укажите data-oid и data-vid ролика (см. комментарий в коде страницы)';
-						return;
-					}
-					var iframe = document.createElement('iframe');
-					iframe.src = 'https://vk.com/video_ext.php?oid=' + oid + '&id=' + vid + '&hd=2&autoplay=1';
-					iframe.allow = 'autoplay; encrypted-media; fullscreen; picture-in-picture';
-					iframe.setAttribute('allowfullscreen', '');
-					box.appendChild(iframe);
 					poster.remove();
+					video.play();
 				});
 			});
 		});

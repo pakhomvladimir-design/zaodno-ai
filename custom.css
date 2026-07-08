@@ -34,6 +34,26 @@ section[id] {
     max-width: 1400px;
 }
 
+.site-topbar__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-topbar__brand {
+    margin: 0;
+    text-align: left;
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+}
+
 .site-topbar__note {
     margin: 0;
     text-align: right;
@@ -51,10 +71,18 @@ section[id] {
         padding-top: 24px;
     }
 
+    .site-topbar__row {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .site-topbar__brand,
     .site-topbar__note {
         text-align: center;
-        font-size: 11px;
-        letter-spacing: 1.6px;
+        font-size: 10px;
+        letter-spacing: 1.4px;
+        white-space: normal;
     }
 }
 
@@ -70,12 +98,13 @@ section[id] {
     gap: 32px;
 }
 
-.showreel-box--stacked .video-embed {
+.hero-video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5000 / 1328;
     border-radius: 18px;
-}
-
-.showreel-box--stacked .video-embed__label {
-    font-size: 17px;
+    background: #0f0819;
+    object-fit: cover;
 }
 
 @media (max-width: 767px) {
@@ -97,12 +126,15 @@ section[id] {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.video-embed iframe {
+.video-embed iframe,
+.video-embed .case-video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     border: 0;
+    object-fit: cover;
+    background: #0f0819;
 }
 
 /* --- Плейсхолдер до клика (click-to-load) --- */
